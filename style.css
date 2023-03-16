@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.wave{
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -20;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+}
+.image{
+    display: flex;
+    justify-content: center;
+}
+
+.image img{
+    width: 600px;
+}
+
+.login-container{
+    display: grid;
+}
+
+.login-container .avatar{
+    width: 180px;
+    align-self:center;
+    justify-self:center;
+    transform: translate(0px,20px);
+}
+
+.login-container .intro{
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: 7px;
+    justify-self:center;
+    transform: translate(0px,18px);
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.login-container .note{
+    font-size: 20px;
+    justify-self: center;
+    transform: translate(0px,0px);
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+
+.line{
+    background-color: #195190;
+    width: 120px;
+    height: 3px;
+    border-radius: 30px;justify-self: center;
+    transform: translate(0px,-20px);
+}
+
+.login-container .btn{
+    align-self:self-start;
+    justify-self: center;
+    transform: translate(0px,-10px);
+}
+
+.login-container .btn button{ 
+    display: block;
+    width: 300px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    background-color:#195190;
+    outline: none;
+    border: none;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing:1px;
+    font-weight: 100;
+    box-shadow: 8px 8px 6px -2px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 8px 8px 6px -2px rgba(0,0,0,0.8);
+    -moz-box-shadow: 8px 8px 6px -2px rgba(0,0,0,0.8);
+}
+
+.icon img{
+    width: 25px;
+    height: 25px;
+    transform: translate(-0px,5px);
+    margin-right: 10px;
+}
+.icon {
+    font-size: 18px;
+}
+
+.btn button:hover{
+    background-color:#1f62ad;
+}
+
+@media screen and (max-width:1024px) {
+    .image{
+        display: none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+
+    }
+    .wave{
+        display: none;
+    }
+    .login-container .btn button{
+        width: 400px;
+    }
+    .line{
+        display: none;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .login-container .btn button{
+        width: 300px;
+    }
+}
